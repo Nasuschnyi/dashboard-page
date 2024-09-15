@@ -1,0 +1,43 @@
+$brkPoint: (
+	'xl': 1250px,
+	//desktop
+		'lg': 970px,
+	//laptop
+		'md': 800px,
+	//tablet
+		'sm': 500px,
+	//mobile,,,
+);
+
+$color: (
+	'charleston-green': #292d32,
+	'cool-grey': #9197b3,
+	'bright-gray': #eeeeee,
+	'gray-X11': #b5b7c0,
+	'white': #ffffff,
+	'black': #000000,
+	'outer-space': #404b52,
+	'electric-red': #df0404,
+	'cultured': #f5f5f5,
+	'generic-viridian': #008767,
+	'persian-green': #00b087,
+	'light-sea-green': #16c098,
+	'han-purple': #5932ea,
+	'pink': #ffc5c5,
+	'gray': #7e7e7e,
+	'sea-green': #16c098,
+	'sonic-silver': #757575,
+	'old-silver': #838383,
+	'ghost-white': #f9fbff,
+	'baby-powder': #fafbff,
+);
+
+%transition {
+	transition: all 0.3s ease;
+}
+
+%flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

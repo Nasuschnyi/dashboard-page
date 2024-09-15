@@ -1,0 +1,18 @@
+.logo {
+	display: flex;
+	height: 39px;
+
+	&__wrap {
+		display: flex;
+		gap: 4px;
+		margin: 0 0 53px;
+	}
+
+	&__caption {
+		display: flex;
+		align-items: flex-end;
+		margin: 0 0 5px 0;
+		color: map-get($color, 'old-silver');
+		font-size: 10px;
+	}
+}

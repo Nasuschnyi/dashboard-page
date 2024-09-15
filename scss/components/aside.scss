@@ -1,0 +1,104 @@
+.arrow-icon {
+	background: url('./img/arrow-icon.svg') no-repeat center;
+	width: 16px;
+	height: 16px;
+}
+
+.icon {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+
+	&--dashboard {
+		background: url('./img/dashboard-icon.svg') no-repeat center;
+		width: 24px;
+		height: 24px;
+	}
+
+	&--product {
+		background: url('./img/product-icon.svg') no-repeat center;
+		width: 24px;
+		height: 24px;
+	}
+
+	&--customers {
+		background: url('./img/customers-icon.svg') no-repeat center;
+		width: 24px;
+		height: 24px;
+	}
+
+	&--income {
+		background: url('./img/income-icon.svg') no-repeat center;
+		width: 24px;
+		height: 24px;
+	}
+
+	&--promote {
+		background: url('./img/promote-icon.svg') no-repeat center;
+		width: 24px;
+		height: 24px;
+	}
+
+	&--help {
+		background: url('./img/help-icon.svg') no-repeat center;
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.aside {
+	padding: 36px 61px 76px 28px;
+	width: fit-content;
+	background: map-get($color, 'white');
+	box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+	height: 100%;
+}
+
+.nav {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		color: map-get($color, 'cool-grey');
+		padding: 11px 8px 11px 11px;
+		border-radius: 8px;
+		@extend %transition;
+
+		&.active {
+			color: map-get($color, 'white');
+			background: map-get($color, 'han-purple');
+
+			& .icon {
+				filter: brightness(0) invert(1);
+			}
+		}
+
+		&:hover {
+			color: map-get($color, 'white');
+			background: rgba(map-get($color, 'han-purple'), 0.8);
+
+			& .icon {
+				filter: brightness(0) invert(1);
+			}
+		}
+
+		svg {
+			height: 24px;
+		}
+	}
+
+	&__text {
+		display: inline-flex;
+		align-items: center;
+		margin: 0 0 0 34px;
+		height: 100%;
+		font-style: normal;
+		font-size: 14px;
+	}
+}

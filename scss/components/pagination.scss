@@ -1,0 +1,36 @@
+.pagination {
+	&__list {
+		display: flex;
+		gap: 12px;
+	}
+
+	& li {
+		display: flex;
+	}
+
+	&-ellipsis {
+		align-items: flex-end;
+	}
+
+	&__link {
+		@extend %flex;
+		font-size: 12px;
+		width: 26px;
+		height: 24px;
+		background: map-get($color, 'cultured');
+		border-radius: 4px;
+		border: 1px solid map-get($color, 'bright-gray');
+		color: map-get($color, 'outer-space');
+		@extend %transition;
+
+		&:hover {
+			color: map-get($color, 'white');
+			background: rgba(map-get($color, 'han-purple'), 0.8);
+		}
+
+		&.active {
+			color: map-get($color, 'white');
+			background: map-get($color, 'han-purple');
+		}
+	}
+}

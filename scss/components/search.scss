@@ -1,0 +1,32 @@
+.search {
+	display: flex;
+	gap: 8px;
+	flex-direction: row-reverse;
+	align-items: center;
+	height: fit-content;
+	border-radius: 10px;
+	background: map-get($color, 'ghost-white');
+	overflow: hidden;
+	padding: 7px 8px;
+	width: 216px;
+
+	svg {
+		height: 24px;
+		stroke: map-get($color, 'gray-X11');
+		@extend %transition;
+	}
+
+	&__input {
+		background: transparent;
+		color: map-get($color, 'charleston-green');
+
+		&::placeholder {
+			font-size: 12px;
+			color: map-get($color, 'gray-X11');
+		}
+	}
+}
+
+input[type='search']:focus + svg {
+	stroke: map-get($color, 'charleston-green');
+}

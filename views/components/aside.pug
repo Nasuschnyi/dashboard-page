@@ -1,0 +1,40 @@
+aside.aside
+    include ../components/logo.pug
+    nav.nav
+        ul.nav__list
+            li.nav__item
+                a(href='dashboard').nav__link
+                    i.icon 
+                        i.icon--dashboard
+                            span.nav__text Dashboard
+            li.nav__item
+                a(href='product').nav__link
+                    i.icon 
+                        i.icon--product
+                            span.nav__text Product
+                        i.arrow-icon
+            li.nav__item
+                a(href='customers').nav__link
+                    i.icon 
+                            i.icon--customers
+                                span.nav__text Customers
+                            i.arrow-icon
+            li.nav__item
+                a(href='income').nav__link        
+                    i.icon 
+                            i.icon--income
+                                span.nav__text Income
+                            i.arrow-icon
+            li.nav__item
+                a(href='promote').nav__link
+                    i.icon 
+                            i.icon--promote
+                                span.nav__text Promote
+                            i.arrow-icon
+            li.nav__item
+                a(href='help').nav__link
+                    i.icon 
+                            i.icon--help
+                                span.nav__text Help
+                            i.arrow-icon
+    include ../components/user.pug

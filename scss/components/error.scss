@@ -1,0 +1,19 @@
+.error {
+	@extend %flex;
+	flex-direction: column;
+	gap: 24px;
+	height: 100%;
+	margin: 24px 0 0 0;
+
+	&-title {
+		color: map-get($color, 'electric-red');
+		font-size: clamp(24px, 2.5vw, 32px);
+		line-height: 100%;
+	}
+
+	&-desc {
+		color: map-get($color, 'charleston-green');
+		font-size: clamp(14px, 1.5vw, 20px);
+		line-height: 120%;
+	}
+}

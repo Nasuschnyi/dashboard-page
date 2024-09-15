@@ -1,0 +1,97 @@
+.table {
+	margin: 0 0 28px;
+
+	& thead {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: -44px;
+			display: block;
+			width: 112%;
+			height: 1px;
+			background: map-get($color, 'bright-gray');
+		}
+	}
+
+	& th {
+		color: map-get($color, 'gray-X11');
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 150%;
+		white-space: nowrap;
+		text-align: start;
+		padding-bottom: 12px;
+
+		&:last-child {
+			text-align: center;
+		}
+	}
+
+	& tbody {
+		tr {
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				display: block;
+				width: 100%;
+				height: 1px;
+				background: map-get($color, 'bright-gray');
+			}
+		}
+
+		td {
+			&:last-child {
+				@extend %flex;
+				padding-right: 0;
+			}
+		}
+	}
+
+	&__status {
+		@extend %flex;
+		height: 29px;
+		width: 80px;
+	}
+
+	td {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 150%;
+		color: map-get($color, 'charleston-green');
+		white-space: nowrap;
+		text-align: start;
+		padding: 19px 46px 19px 0;
+
+		.status {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 29px;
+			text-align: center;
+			vertical-align: middle;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			border-radius: 4px;
+			overflow: hidden;
+			height: 100%;
+			width: 100%;
+
+			&.active {
+				color: map-get($color, 'generic-viridian');
+				border: 1px solid map-get($color, 'persian-green');
+				background: rgba(map-get($color, 'light-sea-green'), 0.38);
+			}
+
+			&.inactive {
+				color: map-get($color, 'electric-red');
+				border: 1px solid map-get($color, 'electric-red');
+				background: map-get($color, 'pink');
+			}
+		}
+	}
+}
