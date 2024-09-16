@@ -20,6 +20,7 @@ function loadPage(page) {
 			document.querySelector('.article').innerHTML = html;
 			const clickedLink = document.querySelector(`a[href="${page}"]`);
 			toggleActiveClass(clickedLink);
+			animateMain();
 		})
 		.catch((error) => {
 			document.querySelector('.article').innerHTML = `
@@ -52,4 +53,15 @@ document.querySelector('.btn-close').addEventListener('click', function() {
 function removeActiveClass() {
 	document.querySelector('.nav__link.active')?.classList.remove('active');
 	document.querySelector('.main').classList.remove('active');
+}
+
+function animateMain() {
+	const main = document.querySelector('.main');
+	main.style.opacity = 0;
+	main.style.transform = 'scale(0)';
+	setTimeout(() => {
+		main.style.opacity = 1;
+		main.style.transform = 'scale(1)';
+		main.style.transition = 'opacity 0.5s, transform 0.5s';
+	}, 500);
 }
